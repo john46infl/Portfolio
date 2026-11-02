@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John (john_46) | Senior Digital Artist & Concept Designer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        artstation: {
+                            blue: '#13aff0',
+                            darkBlue: '#0d8ec9',
+                            bg: '#131516',
+                            card: '#1c1e20',
+                            cardHover: '#25282a',
+                            nav: '#191b1d',
+                            border: '#2c2f33',
+                            textMuted: '#9aa0a6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131516;
+            color: #e3e5e7;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131516;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2c2f33;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #13aff0;
+        }
+        .glass-header {
+            background: rgba(25, 27, 29, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        /* Custom Hover Zoom & Shimmer */
+        .art-card-img {
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .art-card:hover .art-card-img {
+            transform: scale(1.06);
+        }
+    </style>
+</head>
+<body class="bg-artstation-bg text-gray-200 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-40 glass-header border-b border-artstation-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                
+                <!-- Artist Brand Info -->
+                <div class="flex items-center space-x-3">
+                    <div class="relative group cursor-pointer" onclick="scrollToSection('hero')">
+                        <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-artstation-blue shadow-lg shadow-artstation-blue/20">
+                            <!-- High quality artist avatar -->
+                            <svg class="w-full h-full text-artstation-blue bg-artstation-card p-1.5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 19.5h20L12 2zm0 4.2l6.5 11.3H5.5L12 6.2z"/>
+                                <circle cx="12" cy="14" r="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#hero" class="font-bold text-lg tracking-wide text-white hover:text-artstation-blue transition duration-200">JOHN <span class="text-xs font-semibold px-2 py-0.5 rounded bg-artstation-border text-artstation-blue ml-1">@john_46</span></a>
+                        <p class="text-xs text-artstation-textMuted hidden sm:block">Senior Concept Artist & 3D Generalist</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#gallery" class="text-gray-300 hover:text-artstation-blue transition-colors">Portfolio</a>
+                    <a href="#about" class="text-gray-300 hover:text-artstation-blue transition-colors">About & Resume</a>
+                    <a href="#contact" class="text-gray-300 hover:text-artstation-blue transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button & Mobile Toggle -->
+                <div class="flex items-center space-x-3">
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-artstation-blue hover:bg-artstation-darkBlue text-white text-xs uppercase tracking-wider font-bold py-2.5 px-4 rounded-md transition duration-200 shadow-md shadow-artstation-blue/20">
+                        <i class="fa-solid fa-paper-plane"></i> Hire Me
+                    </a>
+                    
+                    <!-- Mobile Hamburger Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-gray-400 hover:text-white p-2 rounded-md focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-artstation-nav border-b border-artstation-border px-4 pt-2 pb-4 space-y-2">
+            <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-artstation-card">Portfolio</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-artstation-card">About & Resume</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-artstation-card">Contact</a>
+            <a href="#contact" class="block text-center mt-3 bg-artstation-blue hover:bg-artstation-darkBlue text-white font-bold py-2 px-4 rounded-md text-sm">Hire Me</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-artstation-border">
+        <!-- Hero Background Canvas Overlay Pattern -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#13aff0_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <div class="md:col-span-8 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-artstation-blue/10 border border-artstation-blue/30 text-artstation-blue text-xs font-semibold uppercase tracking-widest">
+                        <span class="w-2 h-2 rounded-full bg-artstation-blue animate-pulse"></span> Available for Freelance & Full-time
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Crafting Virtual Worlds, Characters & Keyframe Art.
+                    </h1>
+                    <p class="text-base sm:text-lg text-artstation-textMuted max-w-2xl leading-relaxed">
+                        Welcome to the official portfolio of <strong class="text-white">John (john_46)</strong>. Specialized in 3D Environment Design, Sci-Fi/Fantasy Character Modeling, and Unreal Engine 5 Cinematic Composition.
+                    </p>
+
+                    <!-- Quick Stats Badges -->
+                    <div class="pt-4 flex flex-wrap justify-center md:justify-start gap-6 text-xs text-artstation-textMuted font-mono">
+                        <div>
+                            <span class="text-white font-bold text-lg block">8+</span> Years Experience
+                        </div>
+                        <div class="border-l border-artstation-border pl-6">
+                            <span class="text-white font-bold text-lg block">45+</span> Completed Projects
+                        </div>
+                        <div class="border-l border-artstation-border pl-6">
+                            <span class="text-white font-bold text-lg block">AAA</span> Game & Film Ready
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Highlight Widget -->
+                <div class="md:col-span-4 flex justify-center">
+                    <div class="w-full max-w-sm rounded-xl overflow-hidden bg-artstation-card border border-artstation-border shadow-2xl group hover:border-artstation-blue transition duration-300">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox(0)">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk Citadel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition"></div>
+                            <span class="absolute top-3 right-3 bg-black/60 backdrop-blur text-xs px-2.5 py-1 rounded text-artstation-blue font-semibold uppercase tracking-wider border border-artstation-blue/30">
+                                Featured
+                            </span>
+                            <div class="absolute bottom-3 left-3 right-3">
+                                <h3 class="text-white font-bold text-base truncate">Cyberpunk Citadel 2099</h3>
+                                <p class="text-xs text-gray-300">3D Environment • Unreal Engine 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GALLERY SECTION -->
+    <section id="gallery" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        
+        <!-- Category Filter & Search Bar -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+            <!-- Filter Pills -->
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none" id="filterContainer">
+                <button class="filter-btn active-filter px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap bg-artstation-blue text-white shadow-md shadow-artstation-blue/20 transition" data-filter="all">
+                    All Works
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap bg-artstation-card text-artstation-textMuted hover:text-white hover:bg-artstation-cardHover border border-artstation-border transition" data-filter="3d-concept">
+                    3D Concept
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap bg-artstation-card text-artstation-textMuted hover:text-white hover:bg-artstation-cardHover border border-artstation-border transition" data-filter="environment">
+                    Environment
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap bg-artstation-card text-artstation-textMuted hover:text-white hover:bg-artstation-cardHover border border-artstation-border transition" data-filter="character">
+                    Character Design
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap bg-artstation-card text-artstation-textMuted hover:text-white hover:bg-artstation-cardHover border border-artstation-border transition" data-filter="vfx">
+                    VFX & Lighting
+                </button>
+            </div>
+
+            <!-- Total count label -->
+            <div class="text-xs text-artstation-textMuted flex items-center justify-between md:justify-end gap-2 font-mono">
+                <span>Showing: <strong id="visibleCount" class="text-white">6</strong> Artworks</span>
+            </div>
+        </div>
+
+        <!-- Dynamic Artwork Masonry Grid -->
+        <div id="artworkGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards generated dynamically by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ABOUT & RESUME SECTION -->
+    <section id="about" class="py-16 bg-artstation-nav/50 border-t border-b border-artstation-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Profile Card & Bio -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-artstation-card p-6 rounded-xl border border-artstation-border shadow-xl">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-artstation-blue shrink-0">
+                                <svg class="w-full h-full text-artstation-blue bg-artstation-bg p-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 19.5h20L12 2zm0 4.2l6.5 11.3H5.5L12 6.2z"/>
+                                    <circle cx="12" cy="14" r="2"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-white">John</h2>
+                                <p class="text-xs text-artstation-blue font-mono">ArtStation Profile: john_46</p>
+                                <p class="text-xs text-artstation-textMuted mt-1"><i class="fa-solid fa-location-dot mr-1"></i> Vancouver, BC (Remote Available)</p>
+                            </div>
+                        </div>
+
+                        <p class="text-sm text-gray-300 leading-relaxed">
+                            Hi! I'm John (<span class="font-mono text-artstation-blue">john_46</span>). I specialize in high-detail 3D environment creation, hard-surface concept design, and real-time cinematic rendering. With over 8 years of production experience across game development and visual effects, I bring creative visions to reality with optimal topology and stunning lighting.
+                        </p>
+
+                        <!-- Social Media Links -->
+                        <div class="mt-6 pt-4 border-t border-artstation-border flex items-center justify-between text-lg">
+                            <span class="text-xs font-semibold text-artstation-textMuted uppercase tracking-wider">Connect:</span>
+                            <div class="flex space-x-4">
+                                <a href="https://artstation.com" target="_blank" rel="noopener" class="text-artstation-textMuted hover:text-artstation-blue transition" title="ArtStation"><i class="fa-brands fa-artstation"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-artstation-textMuted hover:text-artstation-blue transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener" class="text-artstation-textMuted hover:text-artstation-blue transition" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://youtube.com" target="_blank" rel="noopener" class="text-artstation-textMuted hover:text-artstation-blue transition" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://github.com" target="_blank" rel="noopener" class="text-artstation-textMuted hover:text-artstation-blue transition" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work History Timeline -->
+                    <div class="bg-artstation-card p-6 rounded-xl border border-artstation-border shadow-xl">
+                        <h3 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase text-artstation-blue"></i> Experience
+                        </h3>
+                        <div class="space-y-4 border-l-2 border-artstation-border pl-4 text-xs">
+                            <div>
+                                <span class="text-artstation-blue font-semibold">2022 - Present</span>
+                                <h4 class="text-sm font-bold text-white">Lead Senior Concept Artist</h4>
+                                <p class="text-artstation-textMuted">Apex Horizon Studios • AAA Sci-Fi Titles</p>
+                            </div>
+                            <div>
+                                <span class="text-artstation-blue font-semibold">2019 - 2022</span>
+                                <h4 class="text-sm font-bold text-white">3D Environment & Matte Artist</h4>
+                                <p class="text-artstation-textMuted">Vanguard VFX Works</p>
+                            </div>
+                            <div>
+                                <span class="text-artstation-blue font-semibold">2016 - 2019</span>
+                                <h4 class="text-sm font-bold text-white">Junior 3D Generalist</h4>
+                                <p class="text-artstation-textMuted">Nebula Interactive</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software & Skill Matrix -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-artstation-card p-6 rounded-xl border border-artstation-border shadow-xl">
+                        <h3 class="text-base font-bold text-white mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-laptop-code text-artstation-blue"></i> Software Proficiency
+                        </h3>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <!-- Tool items -->
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-cube text-xl text-amber-500"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Blender 4.x</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">Modeling & Layout</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-[#000] text-xl text-blue-500">Z</i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">ZBrush</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">Digital Sculpting</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-gamepad text-xl text-purple-500"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Unreal Engine 5</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">Lumen & Nanite</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-paintbrush text-xl text-rose-500"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Substance Painter</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">PBR Texturing</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-image text-xl text-blue-400"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Photoshop</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">Overpaint & Compositing</p>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-artstation-bg rounded-lg border border-artstation-border flex items-center gap-3">
+                                <i class="fa-solid fa-volcano text-xl text-orange-500"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white">Houdini</h4>
+                                    <p class="text-[10px] text-artstation-textMuted">Procedural FX</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Progress Bars -->
+                        <div class="mt-8 space-y-4">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-artstation-textMuted">Core Competencies</h4>
+                            
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-white">Environment Art & Modular Kitbashing</span>
+                                    <span class="text-artstation-blue font-mono">96%</span>
+                                </div>
+                                <div class="w-full h-2 bg-artstation-bg rounded-full overflow-hidden">
+                                    <div class="h-full bg-artstation-blue rounded-full" style="width: 96%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-white">Lighting & Mood Composition</span>
+                                    <span class="text-artstation-blue font-mono">90%</span>
+                                </div>
+                                <div class="w-full h-2 bg-artstation-bg rounded-full overflow-hidden">
+                                    <div class="h-full bg-artstation-blue rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-white">Hard Surface Character & Mech Design</span>
+                                    <span class="text-artstation-blue font-mono">85%</span>
+                                </div>
+                                <div class="w-full h-2 bg-artstation-bg rounded-full overflow-hidden">
+                                    <div class="h-full bg-artstation-blue rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-white tracking-tight">Get In Touch</h2>
+            <p class="text-sm text-artstation-textMuted mt-2">Have a project, job offer, or collaboration request? Send a message directly.</p>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="bg-artstation-card p-6 sm:p-8 rounded-xl border border-artstation-border shadow-2xl relative">
+            
+            <!-- Message Alert Banner -->
+            <div id="formSuccessMessage" class="hidden mb-6 p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium text-center">
+                <i class="fa-solid fa-circle-check text-lg mb-1 block"></i>
+                Thank you! Your message has been sent directly to John. Expect a prompt response within 24 hours.
+            </div>
+
+            <form id="portfolioContactForm" class="space-y-5" onsubmit="handleFormSubmit(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-artstation-textMuted uppercase mb-2">Your Name</label>
+                        <input type="text" required placeholder="e.g. Sarah Connor" class="w-full bg-artstation-bg border border-artstation-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-artstation-blue transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-artstation-textMuted uppercase mb-2">Your Email</label>
+                        <input type="email" required placeholder="e.g. sarah@studio.com" class="w-full bg-artstation-bg border border-artstation-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-artstation-blue transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-artstation-textMuted uppercase mb-2">Inquiry Type</label>
+                    <select class="w-full bg-artstation-bg border border-artstation-border rounded-lg px-4 py-2.5 text-sm text-gray-300 focus:outline-none focus:border-artstation-blue transition">
+                        <option>Freelance / Contract Project</option>
+                        <option>Full-Time Studio Position</option>
+                        <option>Commission Artwork</option>
+                        <option>General Inquiry</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-artstation-textMuted uppercase mb-2">Message</label>
+                    <textarea rows="4" required placeholder="Describe your request or brief project specs..." class="w-full bg-artstation-bg border border-artstation-border rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-artstation-blue transition resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-artstation-blue hover:bg-artstation-darkBlue text-white font-bold py-3 px-6 rounded-lg text-sm uppercase tracking-wider transition duration-200 shadow-lg shadow-artstation-blue/20">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-artstation-nav border-t border-artstation-border py-8 text-xs text-artstation-textMuted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-white">JOHN (john_46)</span>
+                <span>•</span>
+                <span>Digital Art Portfolio</span>
+            </div>
+            <p>© <span id="currentYear"></span> John. Inspired by ArtStation. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#hero" class="hover:text-white transition">Back to Top <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-2 sm:p-6 transition-opacity duration-300">
+        
+        <!-- Modal Close Button -->
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 z-50 text-gray-400 hover:text-white text-3xl focus:outline-none p-2" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Navigation Buttons -->
+        <button onclick="prevArtwork()" class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-artstation-blue text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition border border-gray-700">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button onclick="nextArtwork()" class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 bg-black/50 hover:bg-artstation-blue text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition border border-gray-700">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Main Modal Content Grid -->
+        <div class="w-full max-w-6xl max-h-[92vh] bg-artstation-card rounded-xl border border-artstation-border overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+            
+            <!-- Left: Artwork Display -->
+            <div class="lg:w-3/5 bg-black flex items-center justify-center overflow-hidden min-h-[300px] lg:min-h-[500px]">
+                <img id="modalImg" src="" alt="Artwork detail" class="max-h-[75vh] w-auto object-contain transition duration-300">
+            </div>
+
+            <!-- Right: Artwork Metadata & Details -->
+            <div class="lg:w-2/5 p-6 flex flex-col justify-between overflow-y-auto max-h-[75vh] lg:max-h-none border-t lg:border-t-0 lg:border-l border-artstation-border">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span id="modalCategory" class="px-2.5 py-1 rounded bg-artstation-blue/10 border border-artstation-blue/30 text-artstation-blue text-xs font-mono font-semibold uppercase">
+                            Category
+                        </span>
+                        <div class="text-xs text-artstation-textMuted flex items-center gap-4">
+                            <span><i class="fa-solid fa-eye mr-1"></i> <span id="modalViews">0</span></span>
+                            <span><i class="fa-solid fa-heart text-rose-500 mr-1"></i> <span id="modalLikes">0</span></span>
+                        </div>
+                    </div>
+
+                    <h2 id="modalTitle" class="text-2xl font-bold text-white leading-tight">Artwork Title</h2>
+                    
+                    <p id="modalDesc" class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                        Artwork description and production details.
+                    </p>
+
+                    <!-- Software Badges Used -->
+                    <div class="pt-2">
+                        <h4 class="text-xs font-semibold text-artstation-textMuted uppercase mb-2">Software Used</h4>
+                        <div id="modalSoftware" class="flex flex-wrap gap-2">
+                            <!-- Software pills inserted here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Like & Share Bar -->
+                <div class="pt-6 mt-6 border-t border-artstation-border space-y-4">
+                    <div class="flex items-center justify-between">
+                        <button id="likeBtn" onclick="toggleLikeCurrent()" class="flex-1 mr-2 py-2.5 bg-artstation-bg hover:bg-rose-900/30 border border-artstation-border hover:border-rose-500 text-white rounded-lg text-xs font-bold transition flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-heart text-rose-500 text-sm"></i> Appreciate Project
+                        </button>
+                        <button onclick="copyCurrentLink()" class="px-4 py-2.5 bg-artstation-bg hover:bg-artstation-cardHover border border-artstation-border text-artstation-textMuted hover:text-white rounded-lg text-xs font-bold transition" title="Copy Link">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                    </div>
+
+                    <!-- Author mini bio -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="w-8 h-8 rounded-full bg-artstation-blue/20 border border-artstation-blue flex items-center justify-center text-xs font-bold text-artstation-blue">
+                            J
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-white">John (john_46)</p>
+                            <p class="text-[10px] text-artstation-textMuted">Published on ArtStation Gallery</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Artwork Data Set matching ArtStation style portfolio
+        const artworks = [
+            {
+                id: 0,
+                title: "Cyberpunk Citadel 2099",
+                category: "environment",
+                categoryLabel: "Environment",
+                image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+                description: "A dystopian mega-city environment keyframe created using Unreal Engine 5 with real-time Lumen illumination and customized kitbash modules.",
+                software: ["Unreal Engine 5", "Blender", "Substance Painter"],
+                views: "14.2k",
+                likes: 1240,
+                liked: false
+            },
+            {
+                id: 1,
+                title: "Valkyrie Mech Suit Protocol",
+                category: "character",
+                categoryLabel: "Character Design",
+                image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80",
+                description: "Hard-surface character concept focused on modular exoskeletons and tactical sci-fi aesthetics. Sculpted in ZBrush and textured in Substance 3D.",
+                software: ["ZBrush", "Substance Painter", "Marmoset Toolbag"],
+                views: "9.8k",
+                likes: 890,
+                liked: false
+            },
+            {
+                id: 2,
+                title: "Ancient Nebula Shrine",
+                category: "3d-concept",
+                categoryLabel: "3D Concept",
+                image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
+                description: "Mystical temple interior study exploring atmospheric fog shaders, emissive runes, and ancient stone texturing techniques.",
+                software: ["Blender", "Photoshop", "Octane Render"],
+                views: "11.5k",
+                likes: 1050,
+                liked: false
+            },
+            {
+                id: 3,
+                title: "Orbital Anomaly VFX Keyframe",
+                category: "vfx",
+                categoryLabel: "VFX & Lighting",
+                image: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1200&q=80",
+                description: "Space anomaly simulation built in Houdini with custom particle dynamics and composited in Nuke for cinematic key art.",
+                software: ["Houdini", "Nuke", "Photoshop"],
+                views: "8.1k",
+                likes: 720,
+                liked: false
+            },
+            {
+                id: 4,
+                title: "Neo Tokyo Rain Alleyway",
+                category: "environment",
+                categoryLabel: "Environment",
+                image: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=80",
+                description: "Real-time raytraced urban environment created for an unannounced cyberpunk RPG title. Features custom wet asphalt shaders.",
+                software: ["Unreal Engine 5", "3ds Max", "Substance Designer"],
+                views: "16.4k",
+                likes: 1820,
+                liked: false
+            },
+            {
+                id: 5,
+                title: "Biomechanical Drone Guardian",
+                category: "character",
+                categoryLabel: "Character Design",
+                image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80",
+                description: "Alien robotic sentinel exploration emphasizing organic curves fused with industrial mechanics.",
+                software: ["ZBrush", "Keyshot", "Photoshop"],
+                views: "6.9k",
+                likes: 610,
+                liked: false
+            }
+        ];
+
+        let currentIndex = 0;
+
+        // Render Artwork Cards
+        function renderGallery(filter = 'all') {
+            const grid = document.getElementById('artworkGrid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? artworks 
+                : artworks.filter(item => item.category === filter);
+
+            document.getElementById('visibleCount').innerText = filtered.length;
+
+            filtered.forEach((art) => {
+                const card = document.createElement('div');
+                card.className = "art-card group relative bg-artstation-card rounded-xl overflow-hidden border border-artstation-border cursor-pointer shadow-lg hover:shadow-2xl hover:border-artstation-blue transition duration-300";
+                card.onclick = () => openLightbox(art.id);
+
+                card.innerHTML = `
+                    <div class="relative overflow-hidden aspect-[4/3] bg-artstation-bg">
+                        <img src="${art.image}" alt="${art.title}" class="art-card-img w-full h-full object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <span class="text-[10px] font-mono font-semibold uppercase tracking-wider text-artstation-blue mb-1">${art.categoryLabel}</span>
+                            <h3 class="text-white font-bold text-base leading-snug">${art.title}</h3>
+                            <div class="flex items-center justify-between text-xs text-artstation-textMuted mt-2 pt-2 border-t border-gray-800">
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-eye"></i> ${art.views}</span>
+                                <span class="flex items-center gap-1"><i class="fa-solid fa-heart ${art.liked ? 'text-rose-500' : ''}"></i> ${art.likes}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(id) {
+            currentIndex = id;
+            updateLightboxContent();
+            document.getElementById('lightboxModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateLightboxContent() {
+            const art = artworks[currentIndex];
+            document.getElementById('modalImg').src = art.image;
+            document.getElementById('modalTitle').innerText = art.title;
+            document.getElementById('modalDesc').innerText = art.description;
+            document.getElementById('modalCategory').innerText = art.categoryLabel;
+            document.getElementById('modalViews').innerText = art.views;
+            document.getElementById('modalLikes').innerText = art.likes;
+
+            // Render software badges
+            const softwareContainer = document.getElementById('modalSoftware');
+            softwareContainer.innerHTML = '';
+            art.software.forEach(sw => {
+                const badge = document.createElement('span');
+                badge.className = "px-2.5 py-1 bg-artstation-bg border border-artstation-border rounded text-xs text-gray-300 font-mono";
+                badge.innerText = sw;
+                softwareContainer.appendChild(badge);
+            });
+
+            // Update like button state
+            const likeBtn = document.getElementById('likeBtn');
+            if (art.liked) {
+                likeBtn.classList.add('border-rose-500', 'text-rose-400');
+            } else {
+                likeBtn.classList.remove('border-rose-500', 'text-rose-400');
+            }
+        }
+
+        function nextArtwork() {
+            currentIndex = (currentIndex + 1) % artworks.length;
+            updateLightboxContent();
+        }
+
+        function prevArtwork() {
+            currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
+            updateLightboxContent();
+        }
+
+        function toggleLikeCurrent() {
+            const art = artworks[currentIndex];
+            art.liked = !art.liked;
+            art.likes += art.liked ? 1 : -1;
+            updateLightboxContent();
+            renderGallery(document.querySelector('.active-filter').dataset.filter);
+        }
+
+        function copyCurrentLink() {
+            const url = window.location.href;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url);
+            } else {
+                document.execCommand('copy');
+            }
+            alert('Artwork link copied to clipboard!');
+        }
+
+        // Smooth Scroll helper
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Contact Form handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const msg = document.getElementById('formSuccessMessage');
+            msg.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                msg.classList.add('hidden');
+            }, 6000);
+        }
+
+        // Keyboard & Event Listeners initialization
+        window.onload = function() {
+            document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+            // Render initial gallery
+            renderGallery('all');
+
+            // Category Filter Click Listeners
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active-filter', 'bg-artstation-blue', 'text-white');
+                        b.classList.add('bg-artstation-card', 'text-artstation-textMuted');
+                    });
+                    btn.classList.add('active-filter', 'bg-artstation-blue', 'text-white');
+                    btn.classList.remove('bg-artstation-card', 'text-artstation-textMuted');
+
+                    renderGallery(btn.dataset.filter);
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Keyboard navigation for Lightbox
+            document.addEventListener('keydown', (e) => {
+                const modal = document.getElementById('lightboxModal');
+                if (!modal.classList.contains('hidden')) {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') nextArtwork();
+                    if (e.key === 'ArrowLeft') prevArtwork();
+                }
+            });
+        };
+    </script>
+</body>
+</html>
