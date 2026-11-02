@@ -1,629 +1,549 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-	<title>Interio - Interior Designer HTML CSS Website Template</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="author" content="TemplatesJungle">
-	<meta name="keywords" content="Interior, Designer, HTML, CSS, Website Template">
-	<meta name="description" content="Interio is a Interior Designer HTML CSS Website Template">
+	<title>Capturer</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="format-detection" content="telephone=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="author" content="">
+	    <meta name="keywords" content="">
+	    <meta name="description" content="">
+	    <link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="fonts/icomoon/icomoon.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lustria&display=swap"
-		rel="stylesheet">
-
-	<script src="js/modernizr.js"></script>
+		<link rel="stylesheet" type="text/css" href="slick/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="aos/aos.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body class="bg-body">
+<body>
 
-	<div class="preloader">
-		<div class="loader">
-			<div class="dot"></div>
-			<div class="dot"></div>
-			<div class="dot"></div>
+<header id="header">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-expand-lg col-md-12 padding-small flex-container">
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#slide-navbar-collapse" aria-controls="slide-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"><i class="icon icon-navicon"></i></span>
+				</button>
+				<div class="navbar-collapse collapse" id="slide-navbar-collapse">
+				<ul class="navbar-nav list-inline light text-uppercase align-items-baseline">
+					<li class="nav-item active"><a href="#billboard" class="navlink">Home</a></li>
+					<li class="nav-item"><a href="#about">About us</a></li>
+					<li class="nav-item"><a href="#portfolios">Portfolios</a></li>		
+					<li class="nav-item nav-brand">
+						<a href="index.html"><img src="images/logo.png"></a>
+					</li>
+					<li class="nav-item"><a href="#blog">Blog</a></li>
+					<li class="nav-item"><a href="#gallery">Gallery</a></li>
+					<li class="nav-item"><a href="#contact">Contact us</a></li>
+				</ul>
+				</div><!--navbar-collapse-->
+			</nav>
 		</div>
 	</div>
+</header>
 
-	<div class="search-box">
-		<div class="search-wrap">
-			<div class="close-button">
-				<i class="icon icon-cancel"></i>
+<div id="body-wrapper" class="bg-grey">
+
+	<section id="billboard" class="dark-overlay">
+		<div class="slide" style="background: url(images/banner.jpg) no-repeat;background-size: cover;"></div>
+	</section><!--billboard-->
+
+	<section id="about" class="about-us padding-medium bg-sand">
+		<div class="container">
+			<div class="row">
+				<div class="text-content text-center col-md-8">
+					<div class="section-header">
+						<h2 class="section-title pb-4 text-uppercase">We Capture Your Special Moments</h2>
+						
+						<p>Photography that captures connections and emotions that you celebrate on your wedding day. My images explores your love for each other and the joy of sharing it with your family and friends. My goal is to create beautiful and emotive your love for each other and the joy of sharing it with your family and friends photography; an image gallery for you to treasure.</p>
+						
+						<p>Tell me your plans, let you wedding day adventure UNFURL with me. I do believe its a collaboration, so let me in on what makes your love work, for me to give let me in on what makes it back to you as a photograph.</p>
+					</div>
+
+					<figure>
+						<img src="images/dark-logo.png" alt="logo">
+					</figure>
+				</div><!--content-->
 			</div>
-			<form id="search-form" class="text-center" action="" method="">
-				<input type="text" class="search-input" placeholder="Search..." />
-				<i class="icon icon-search"></i>
-			</form>
 		</div>
-	</div>
+	</section>
 
-	<header id="header">
-		<div class="header-wrap">
-			<div class="container">
-				<div class="row">
+	<section id="portfolios" class="portfolios fancyboxeffect mb-6">	
+		<div class="container">
+			<div class="row">
+				<div class="section-header text-center">
+					<h2 class="section-title pb-4 text-uppercase">~ Portfolios ~</h2>
+				</div>
+				<div class="portfolios-content d-flex flex-wrap">
+					<div class="content col-md-4 mb-3">
+						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model1.jpg">
+							<img src="images/model1.jpg" alt="model" class="portoImg">
+							<div class="overlay-content text-center light">
+								<h3 class="title">Portraits</h3>
+								<span>View More</span>
+							</div>
+						</a>
+					</div><!--content-->
 
-					<div class="col-md-2 col-xs-6">
-						<div class="main-logo">
-							<a href="index.html"><img src="images/main-logo.png" alt="logo"></a>
+					<div class="content col-md-4 mb-3">
+						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model2.jpg">
+							<img src="images/model2.jpg" alt="model" class="portoImg">
+							<div class="overlay-content text-center light">
+								<h3 class="title">Wedding</h3>
+								<span>View More</span>
+							</div>
+						</a>
+					</div><!--content-->
+
+					<div class="content col-md-4">
+						<a class="image-link js-scroll down-enter" rel="gallery" href="images/model3.jpg">
+							<img src="images/model3.jpg" alt="model" class="portoImg">
+							<div class="overlay-content text-center light">
+								<h3 class="title">Wedding</h3>
+								<span>View More</span>
+							</div>
+						</a>
+					</div><!--content-->				
+				</div>
+			</div>
+				<div class="pix_btn text-center">
+					<button class="btn-hvr-effects5 mt-5"><span>View Portfolio</span></button> 
+				</div>	
+		</div>
+	</section>
+
+	<section id="services" class="services padding-large darkest dark-overlay" style="background: url(images/servicebg.jpg) no-repeat; background-size: cover; filter: grayscale(100%);">
+		<div class="container">
+			<div class="row">
+				<div class="section-header text-center light">
+					<h2 class="section-title text-uppercase pb-4">~ Services ~</h2>
+				</div>
+				<div class="text-content light text-center color-secondary col-md-5">
+					<p>Photography that captures connections and emotions that you celebrate on your wedding day.Photography that captures connections and emotions that you celebrate on your wedding day. </p>
+					<div class="light-btn newsletter-button d-flex justify-content-center padding-small">
+						<input type="text" name="Subscribe" placeholder="Your Email Address">			
+						<div class="pix_btn text-center">
+							<button class="btn-hvr-effects6"><span class="color-primary text-uppercase">Send it</span></button> 
+						</div>	
+					</div>
+				</div><!--text-content-->
+				<div class="content-row text-center light d-flex flex-wrap">
+					<div class="content-block col-md-4">
+						<h3>Photo Sessions</h3>
+						<p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+					</div><!--content-->
+					<div class="content-block col-md-4">
+						<h3>Occasions</h3>
+						<p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+					</div><!--content-->
+					<div class="content-block col-md-4">
+						<h3>Photo Editing</h3>
+						<p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+					</div><!--content-->
+				</div><!--services-content-->
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials" class="testimonials-wrap padding-medium">
+		<div class="container">
+			<div class="row">
+				<div class="reviews-content col-md-12 text-center">
+					<div class="section-header text-center">
+						<h2 class="section-title text-uppercase">~ Testimonials ~</h2>
+					</div>
+
+					<div class="testimonial-slider">
+						<div class="testimonials-inner text-center pt-50">
+							<img src="images/couple.jpg" alt="reviewer" class="reviewImg img-circle align-center">
+							<p>Amazing photographer. Jack was very easy to work with and made us feel really ease. The finished product was exactly what we envisioned. He listened to exactly what we wanted, and I never felt like I was being made to pose - the whole process was very natural. We were able to go and enjoy our night with the guests and Jack took care of the rest</p>
+							<div class="testimonial-author text-uppercase">
+								<strong class="name d-flex justify-content-center mt-3">"Austin & Caterine"</strong>
+							</div>
+						</div><!--reviews-info-->
+
+						<div class="testimonials-inner pt-50">
+							<img src="images/couple.jpg" alt="reviewer" class="reviewImg img-circle align-center">
+							<p>He was very easy to work with and made us feel really ease. The finished product was exactly what we envisioned. He listened to exactly what we wanted, and I never felt like I was being made to pose - the whole process was very natural. We were able to go and enjoy our night with the guests and Jack took care of the rest</p>
+							<div class="testimonial-author text-uppercase">
+								<strong class="name d-flex justify-content-center mt-3">"Simona"</strong>
+							</div>
+						</div><!--reviews-info-->
+
+						<div class="testimonials-inner pt-50">
+							<img src="images/couple.jpg" alt="reviewer" class="reviewImg img-circle align-center">
+							<p>Photography that captures connections and emotions that you celebrate on your wedding day.</p>
+							<div class="testimonial-author text-uppercase">
+								<strong class="name d-flex justify-content-center mt-3">"Jean Morgan"</strong>
+							</div>
+						</div><!--reviews-info-->
+
+					</div><!--testimonial-slider-->				
+				</div><!--col-md-12-->
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery" class="gallery-wrap padding-medium">
+		<div class="section-header text-center">
+			<h2 class="section-title text-uppercase pb-4">~ Gallery ~</h2>
+		</div>
+		<div class="gallery-content">
+
+			<div class="gallery-row">
+				
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg1.jpg">
+							<img src="images/galleryimg1.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg2.jpg">
+							<img src="images/galleryimg2.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg3.jpg">
+							<img src="images/galleryimg3.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+
+			</div>
+
+			<div class="gallery-row">
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg4.jpg">
+							<img src="images/galleryimg4.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg5.jpg">
+							<img src="images/galleryimg5.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg6.jpg">
+							<img src="images/galleryimg6.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+			</div>
+
+			<div class="gallery-row">
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg1.jpg">
+							<img src="images/galleryimg1.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg2.jpg">
+							<img src="images/galleryimg2.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+				<div class="content col-md-4 pb-4">
+					<figure>
+						<a class="image-link" href="images/largegalleryimg3.jpg">
+							<img src="images/galleryimg3.jpg" alt="model" class="galleryImg">
+							<div class="overlay">
+								<i class="icon icon-search-plus"></i>
+							</div><!--imgOverlay-->
+						</a>
+					</figure>
+				</div><!--content-->
+			</div>
+
+		</div><!--gallery-content-->
+		
+		<div class="pix_btn text-center">
+			<button class="btn-hvr-effects5 mt-5"><span>View Gallery</span></button> 
+		</div>	
+
+	</section>
+
+	<section id="blog" class="latest-blogs padding-large light">
+
+		<div class="bg" data-scroll>
+
+			<div class="blog-content">
+				
+				<div class="container">
+					<div class="row">
+
+						<div class="post-item col-md-6 padding-large">
+						
+							<div class="content">
+								<h2 class="post-title">Eloping in Mountainous Terrain</h2>
+								<p>Imagine spending the day hiking with your best friend, in an amazing landscape,to make vows of marriage to one another.</p>
+								<div class="meta-tags">
+									<span class="meta-date">Simon</span>
+									<em class="meta-date">May 14, 2020</em>
+								</div>
+							</div>
+							<div class="pix_btn">
+								<button class="btn-hvr-effects5 mt-5"><span>Read More</span></button> 
+							</div>
+						</div><!--post-item-->
+
+					</div>
+				</div>
+				
+			</div>
+			
+
+			<div class="bg-image" style="background: url(images/blogbg.jpg) no-repeat; background-size: cover;">
+		</div>
+	</section>
+
+	<section id="association" class="association-with padding-medium">
+		<div class="container">
+			<div class="row">
+			<div class="section-header text-center">
+				<h2 class="section-title text-uppercase pb-4">~ Seen in ~</h2>
+			</div>
+				<div class="content col-md-12">
+					<ul class="d-flex list-unstyled flex-container flex-wrap">
+						<li class="mb-4">
+							<a href="#">
+								<img src="images/associate1.png" alt="photography" class="associateImg pr-20">
+							</a>
+						</li>
+						<li class="mb-4">
+							<a href="#">
+								<img src="images/associate2.png" alt="photography" class="associateImg pr-20">
+							</a>
+						</li>
+						<li class="mb-4">
+							<a href="#">
+								<img src="images/associate3.png" alt="photography" class="associateImg pr-20">
+							</a>
+						</li>
+						<li class="mb-4">
+							<a href="#">
+								<img src="images/associate4.png" alt="photography" class="associateImg pr-20">
+							</a>
+						</li>
+						<li class="mb-4">
+							<a href="#">
+								<img src="images/associate5.png" alt="photography" class="associateImg">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="contact-information">
+		<div class="container">
+			<div class="row">
+				<form class="contact-form d-flex flex-wrap mt-4 col-md-12 dark">
+					<div class="text-input flex-container">
+						<div class="inputContainer col-md-6 pl-0 pr-0">
+							<input type="text" name="name" placeholder="First Name" class="name mb-3">
+							<i class="icon icon-user"></i>
+						</div>
+						<div class="inputContainer col-md-6 pr-0">
+							<input type="text" name="name" placeholder="Last Name" class="name mb-3">
+							<i class="icon icon-user"></i>
+						</div>
+					</div><!--text-input-->
+					<div class="text-input flex-container">
+						<div class="inputContainer col-md-6 pl-0 pr-0">
+							<input type="text" name="E-mail" placeholder="Your E-mail Address" class="mr-3 mb-3">
+							<i class="icon icon-envelope"></i>
+						</div>
+						<div class="inputContainer col-md-6 pr-0">
+							<input type="text" name="Subject" placeholder="Subject" class="mb-3">
+							<i class="icon icon-phone"></i>
 						</div>
 					</div>
-
-					<div class="col-md-10 col-xs-6">
-						<nav id="navbar">
-							<div class="main-menu stellarnav">
-								<ul class="menu-list">
-									<li class="menu-item active"><a href="index.html" class="active">Home</a></li>
-									<li class="menu-item has-sub">
-										<a href="#" class="nav-link">Pages</a>
-										<ul>
-											<li class="active"><a href="index.html">Home</a></li>
-											<li><a href="about.html">About <span class="badge">PRO</span></a></li>
-											<li><a href="styles.html">Styles <span class="badge">PRO</span></a></li>
-											<li><a href="blog.html">Blog <span class="badge">PRO</span></a></li>
-											<li><a href="portfolio.html">Portfolio <span class="badge">PRO</span></a>
-											</li>
-											<li><a href="single-post.html">Post Single <span
-														class="badge">PRO</span></a></li>
-											<li><a href="contact.html">Contact <span class="badge">PRO</span></a></li>
-										</ul>
-									</li>
-									<li class="menu-item"><a href="about.html" class="nav-link">About</a></li>
-									<li class="menu-item"><a href="blog.html" class="nav-link">Blog</a></li>
-									<li class="menu-item"><a href="https://templatesjungle.gumroad.com/l/interio"
-											class="nav-link" target="_blank"><Strong>Get PRO</Strong></a></li>
-								</ul>
-
-							</div>
-
-							<div class="btn-search">
-								<i class="icon icon-search"></i>
-							</div>
-
-						</nav>
+					<div class="inputContainer col-md-12 pl-0 pr-0">
+						<input type="text" name="Subject" placeholder="Subject" class="mb-3">
+						<i class="icon icon-edit"></i>
 					</div>
-
-				</div>
-			</div>
-		</div>
-	</header>
-
-	<section id="billboard">
-		<div class="main-slider">
-
-			<div class="slider-item">
-				<div class="banner-content  ">
-					<div class="banner-element" data-aos="fade-up">
-						<h2 class="banner-title">Modern Interior Style</h2>
-						<p>Suspendisse tempus rhoncus enim pellentesque est vehicula vitae eget. Viverra imperdiet felis
-							sollicitudin pellentesque cursus sit. Feugiat hac porttitor.</p>
-
-						<a href="#" class="btn btn-outline-accent btn-accent-arrow text-uppercase">View Project
-							<i class="icon icon-long-arrow-right"></i></a>
+					<div class="inputContainer col-md-12 pl-0 pr-0">
+						<textarea placeholder="Message" style="height: 150px;"></textarea>
+						<i class="icon icon-edit"></i>
 					</div>
-				</div>
-				<div class="banner-holder">
-					<img src="images/hero-image.jpg" alt="banner" class="banner-image">
-				</div>
+				</form>
 			</div>
-
-			<div class="slider-item">
-				<div class="banner-content  ">
-					<div class="banner-element">
-						<h2 class="banner-title">Residential interior design</h2>
-						<p>Suspendisse tempus rhoncus enim pellentesque est vehicula vitae eget. Viverra imperdiet felis
-							sollicitudin pellentesque cursus sit. Feugiat hac porttitor.</p>
-						<a href="#" class="btn btn-outline-accent btn-accent-arrow text-uppercase">View Project
-							<i class="icon icon-long-arrow-right"></i></a>
-					</div>
-				</div>
-				<div class="banner-holder">
-					<img src="images/main-banner1.jpg" alt="banner" class="banner-image">
-				</div>
-			</div>
-
-			<div class="slider-item">
-				<div class="banner-content  ">
-					<div class="banner-element">
-						<h2 class="banner-title">Multifamily interior design</h2>
-						<p>Suspendisse tempus rhoncus enim pellentesque est vehicula vitae eget. Viverra imperdiet felis
-							sollicitudin pellentesque cursus sit. Feugiat hac porttitor.</p>
-						<a href="#" class="btn btn-outline-accent btn-accent-arrow text-uppercase">View Project
-							<i class="icon icon-long-arrow-right"></i></a>
-					</div>
-				</div>
-				<div class="banner-holder">
-					<img src="images/main-banner2.jpg" alt="banner" class="banner-image">
-				</div>
-			</div>
-
+		</div><!--container-->		
+		<div class="pix_btn text-center">
+			<button class="btn-hvr-effects5 mt-5"><span>Send it</span></button> 
 		</div>
 	</section>
 
-	<button id="scrollToTopBtn">
-		<span>Top</span>
-	</button>
-
-	<section id="brand-collection" class="padding-medium">
+	<section class="instagram padding-medium">
 		<div class="container">
 			<div class="row">
-				<div class="brand-content">
-					<img src="images/brand1.png" alt="brand">
-					<img src="images/brand2.png" alt="brand">
-					<img src="images/brand3.png" alt="brand">
-					<img src="images/brand4.png" alt="brand">
-					<img src="images/brand5.png" alt="brand">
-				</div>
+			<div class="section-header text-center">
+				<h2 class="section-title text-uppercase pb-4">instagram</h2>
 			</div>
-		</div>
-	</section>
-
-	<section id="about">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-6">
-					<figure class="person-thumb" data-aos="fade-right">
-						<img src="images/section-image.png" alt="book" class="single-image">
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg1.jpg" alt="instagram">
+						</a>
 					</figure>
 				</div>
-
-				<div class="col-md-6">
-					<div class="detail-entry" data-aos="fade-left">
-						<div class="section-header pattern">
-							<h2 class="section-title">About Me</h2>
-						</div>
-
-						<div class="detail-wrap">
-							<h4 class="sub-title">"Everything is designed. Few things are designed well."</h4>
-							<p>A pellentesque pretium feugiat vel morbi sagittis lorem habitasse cursus. Suspendisse
-								tempus rhoncus enim pellentesque est in neque, elit mattis vehicula vitae eget. Viverra
-								imperdiet felis sollicitudin tesque cursus sit.</p>
-							<p>Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis nec eget
-								facilisis. Quis nibh ut bibendum nisl quis placerat proin tortor. Mattis in neque, elit
-								mattis morbi sagittis lorem habitasse consequat.</p>
-
-							<a href="about.html" class="btn btn-outline-accent btn-accent-arrow text-uppercase">Read
-								More <i class="icon icon-ns-arrow-right"></i></a>
-						</div>
-					</div>
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg2.jpg" alt="instagram">
+						</a>
+					</figure>
 				</div>
-
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg3.jpg" alt="instagram">
+						</a>
+					</figure>
+				</div>
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg4.jpg" alt="instagram">
+						</a>
+					</figure>
+				</div>
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg5.jpg" alt="instagram">
+						</a>
+					</figure>
+				</div>
+				<div class="col-md-2 text-center mb-3">
+					<figure>
+						<a href="#">
+							<img src="images/galleryimg6.jpg" alt="instagram">
+						</a>
+					</figure>
+				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
 
-	<section id="services" class="padding-large">
+	<footer id="footer">
 		<div class="container">
 			<div class="row">
+				<div class="flex-container flex-wrap">
 
-				<div class="col-md-5" data-aos="fade-right">
-					<div class="section-header pattern">
-						<h2 class="section-title">Services</h2>
+				<div class="col-md-4 widget-menu">
+					<div class="footer-menu d-flex justify-content-center">
+						<ul class="list-unstyled mr-5 text-uppercase">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Portfolio</a></li>
+						</ul>
+						<ul class="list-unstyled text-uppercase">
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Gallery</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
 					</div>
+				</div><!--col-md-4-->
 
-					<div class="detail-wrap">
-						<h4 class="sub-title">Some of my capabilities for your solutions.</h4>
-						<p>Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis nec eget facilisis.
-							Quis nibh ut bibendum nisl quis placerat proin tortor. Mattis in neque.</p>
-						<p>Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis nec eget facilisis
-							quis nibh ut bibendum.</p>
-						<a href="#" class="btn btn-outline-accent btn-accent-arrow text-uppercase">Contact Me <i
-								class="icon icon-ns-arrow-right"></i></a>
+				<div class="col-md-4 widget-menu footer-social-logo text-center">
+					<div class="footer-logo text-center mb-3">
+						<img src="images/footer-logo.png" class="mb-3">
+					</div>	
+					<div class="social-links">
+						<ul class="list-unstyled d-flex">
+							<li class="mr-3"><a href="#"><i class="icon icon-facebook m-1"></i></a></li>
+							<li class="mr-3"><a href="#"><i class="icon icon-twitter m-1"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube m-1"></i></a></li>
+						</ul>
+					</div><!--social-links-->
+				</div><!--col-md-4-->
+
+				<div class="col-md-4 widget-menu">
+					<div class="footer-contact">
+						<h5 class="widget-title text-uppercase">Stay in touch</h5>
+						<ul class="list-unstyled">
+							<li><strong>Capturer Photography</strong></li>
+							<li>Sandviksveien 68</li>
+							<li>N5035 Bergen</li>
+							<li>Norway</li>
+							<li><a href="#">hello@yourcompany.com</a></li>
+						</ul>
 					</div>
-				</div>
+				</div><!--social-links-->
 
-				<div class="col-md-7" data-aos="fade-left">
-					<div class="tab-content">
-						<div id="residential" data-tab-content class="tab-item active">
-							<img src="images/decoration.jpg" alt="decoration" class="vertical-image">
-						</div>
-						<div class="tab-item" id="commercial" data-tab-content>
-							<img src="images/decoration1.jpg" alt="decoration" class="vertical-image">
-						</div>
-						<div class="tab-item" id="multifamily" data-tab-content>
-							<img src="images/decoration2.jpg" alt="decoration" class="vertical-image">
-						</div>
-					</div>
+				</div><!--flex-container-->
 
-					<ul class="tabs">
-						<li data-tab-target="#residential" class="active tab">Residential interior design</li>
-						<li data-tab-target="#commercial" class="tab">Commercial & hospitality interior design</li>
-						<li data-tab-target="#multifamily" class="tab">Multifamily interior design</li>
-					</ul>
-				</div>
-
-				<!-- <div class="triangle-shape bottom-right"></div> -->
-			</div>
-		</div>
-		</div>
-	</section>
-
-	<section id="portfolio">
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header align-center pattern center-align">
-						<h2 class="section-title">my portfolios</h2>
-						<h4 class="sub-title">designed with my knowledge, skills and passion.</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="portfolio-content">
-			<div class="container" data-aos="fade-up">
-				<div class="row d-flex flex-wrap">
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item">
-							<a href="images/room-item1.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item1.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">The urban artville</a></h3>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item align-style">
-							<a href="images/room-item2.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item2.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">Magnolia whimsical boxed</a></h3>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item">
-							<a href="images/room-item3.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item3.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">DeCore minimalism</a></h3>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item">
-							<a href="images/room-item4.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item4.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">The urban artville</a></h3>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item align-style">
-							<a href="images/room-item5.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item5.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">The urban artville</a></h3>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="portfolio-item">
-							<a href="images/room-item6.jpg" class="image-hvr-effect image-link">
-								<img src="images/room-item6.jpg" alt="portfolio" class="portfolio-image">
-							</a>
-							<h3 class="item-title"><a href="#">The urban artville</a></h3>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="align-center">
-			<a href="#" class="btn btn-outline-accent btn-accent-arrow text-uppercase">View All Works <i
-					class="icon icon-ns-arrow-right"></i></a>
-		</div>
-		<!-- <div class="triangle-shape bottom-left"></div> -->
-	</section>
-
-	<section id="testimonial" class="padding-large">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header pattern">
-						<h2 class="section-title">Testimonials</h2>
-						<h4 class="sub-title">What my clients says</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="testimonial-grid" data-aos="fade-up">
-			<div class="container">
-				<div class="row">
-					<div class="testimonial-slider">
-
-						<div class="col-md-4">
-							<div class="testimonial-item">
-								<div class="quote-boxed bg-body">
-									<p>“A pellen tesque pretium feugiat vel morbi sagittis lorem habi tasse cursus.
-										Suspen dise tempus oncus enim pellen tesque est in neque, elit habi mattis.”</p>
-									<div class="author-detail">
-										<div class="author-name">Kelly Garcia</div>
-										<div class="author-profession">KG Architects</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-4">
-							<div class="testimonial-item">
-								<div class="quote-boxed bg-body">
-									<p>“A pellen tesque pretium feugiat vel morbi sagittis lorem habi tasse cursus.
-										Suspen dise tempus oncus enim pellen tesque est in neque, elit habi mattis.”</p>
-									<div class="author-detail">
-										<div class="author-name">Patrik Lisbon</div>
-										<div class="author-profession">Architecture</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="col-md-4">
-							<div class="testimonial-item">
-								<div class="quote-boxed bg-body">
-									<p>“A pellen tesque pretium feugiat vel morbi sagittis lorem habi tasse cursus.
-										Suspen dise tempus oncus enim pellen tesque est in neque, elit habi mattis.”</p>
-									<div class="author-detail">
-										<div class="author-name">Chris Jane</div>
-										<div class="author-profession">KG Architects</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-md-4">
-							<div class="testimonial-item">
-								<div class="quote-boxed bg-body">
-									<p>“A pellen tesque pretium feugiat vel morbi sagittis lorem habi tasse cursus.
-										Suspen dise tempus oncus enim pellen tesque est in neque, elit habi mattis.”</p>
-									<div class="author-detail">
-										<div class="author-name">Jimmy Smith</div>
-										<div class="author-profession">KG Architects</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="subscribe">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6" data-aos="fade-right">
-					<div class="image-holder">
-						<img src="images/room.jpg" alt="newsletter" class="subscribe-image">
-					</div>
-				</div>
-
-				<div class="col-md-6" data-aos="fade-left">
-					<div class="subscribe-content">
-						<div class="section-header pattern">
-							<h2 class="section-title">Newsletter</h2>
-						</div>
-						<div class="headline">Subscribe my newsletter for all offers & latest news.</div>
-						<p>A pellentesque pretium feugiat vel morbi sagittis lorem habitasse cursus. Suspendisse tempus
-							rhoncus enim pellentesque est in neque, elit mattis vehicula vitae eget. Viverra imperdiet
-							felis sollicitudin tesque cursus sit.</p>
-						<form id="form">
-							<input type="text" name="email" placeholder="Your Email Addresss">
-							<button class="btn btn-subscribe btn-large">
-								<div class="button-box">
-									<span>Submit</span>
-									<i class="icon icon-send-o"></i>
-								</div>
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="latest-blog" class="padding-large">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="section-header align-center pattern center-align">
-						<h2 class="section-title">Blog Articles</h2>
-						<span class="slogan">Read some latest blog articles posts.</span>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="post-grid" data-aos="fade-up">
-			<div class="container">
-				<div class="row">
-					<article class="col-md-4">
-						<div class="image-holder">
-							<a href="#" class="image-hvr-effect">
-								<img src="images/post-img1.jpg" alt="post" class="post-image">
-							</a>
-						</div>
-						<div class="post-item">
-							<div class="meta-date">16 Feb, 2021</div>
-							<h3 class="post-title"><a href="blog.html">minimalism is always good for interior design</a>
-							</h3>
-						</div>
-					</article>
-
-					<article class="col-md-4">
-						<div class="image-holder">
-							<a href="#" class="image-hvr-effect">
-								<img src="images/post-img2.jpg" alt="post" class="post-image">
-							</a>
-						</div>
-						<div class="post-item">
-							<div class="meta-date">16 Feb, 2021</div>
-							<h3 class="post-title"><a href="blog.html">minimalism is always good for interior design</a>
-							</h3>
-						</div>
-					</article>
-
-					<article class="col-md-4">
-						<div class="image-holder">
-							<a href="#" class="image-hvr-effect">
-								<img src="images/post-img3.jpg" alt="post" class="post-image">
-							</a>
-						</div>
-						<div class="post-item">
-							<div class="meta-date">16 Feb, 2021</div>
-							<h3 class="post-title"><a href="blog.html">minimalism is always good for interior design</a>
-							</h3>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-
-		<div class="align-center">
-			<a href="blog.html" class="btn btn-outline-accent btn-accent-arrow text-uppercase">Read Articles <i
-					class="icon icon-ns-arrow-right"></i></a>
-		</div>
-	</section>
-
-	<section id="contact" class=" bg-accent padding-large">
-		<div class="container" data-aos="fade-up">
-			<div class="row">
-				<div class="col-md-9">
-					<div class="section-header">
-						<h2 class="section-title anim-text-banner">
-							<span class="anim-text">Feel Free to</span>
-							<span class="anim-text">Contact Me</span>
-						</h2>
-						<or>If you have any projects in mind say hello at <a href="#">contact@example.com</a> or just
-							call me at <strong>+111 1234 2344 1232</strong>.</p>
-					</div>
-				</div>
-
-				<div class="col-md-3">
-					<div class="btn-contact">
-						<a href="contact.html" class="btn btn-accent btn-xlarge text-uppercase">Contact me</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<footer id="footer" class="padding-large" data-aos="fade-up">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-md-4 col-sm-6">
-					<div class="company-brand">
-						<img src="images/main-logo.png" alt="logo" class="footer-logo">
-						<p>Feugiat hac porttitor sem dictum velit, elementum odio. Sed ipsum quis nec eget facilisis
-							quis nibh ut bibendum.</p>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-6">
-					<h5>Quick Links</h5>
-					<ul class="menu-list">
-						<li class="menu-item">
-							<a href="#">Home</a>
-						</li>
-						<li class="menu-item">
-							<a href="about.html">About</a>
-						</li>
-						<li class="menu-item">
-							<a href="styles.html">Styles</a>
-						</li>
-						<li class="menu-item">
-							<a href="blog.html">Blog</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-md-3 col-sm-6">
-					<h5>Services</h5>
-					<ul class="menu-list">
-						<li class="menu-item">
-							<a href="#">Residential</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Commercial & hospitality</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Multifamily</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">All Services</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="col-md-3 col-sm-6">
-					<h5>Get in Touch</h5>
-					<ul>
-						<li><a href="#" class="email">info@yourcompany.com</a></li>
-						<li>15Th Street Avenue, New York, USA</li>
-						<li>011-554-8798-6556</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</footer>
 
-	<div id="footer-bottom" class="padding-small">
+	<div class="footer-bottom bg-mine-shaft">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-
-					<div class="row">
-
-						<div class="col-md-6">
-							<div class="copyright">
-								<p>© 2025 All rights reserved. HTML Template by: <a href="https://templatesjungle.com/"
-										target="_blank">TemplatesJungle</a>.</p>
-							</div>
-						</div>
-
-						<div class="col-md-6">
-							<div class="social-links">
-								<ul>
-									<li>
-										<a href="#"><i class="icon icon-facebook"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="icon icon-twitter"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="icon icon-youtube-play"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="icon icon-behance-square"></i></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-
+			<div class="padding-xsmall text-center">
+				<div class="copyright color-secondary">
+					<p class="mb-0">© 2022 Capturer. All Rights Reserved. Template by <a href="https://www.templatesjungle.com/" target="_blank">TemplatesJungle</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
+</div> 
+
 	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/slideNav.min.js"></script>
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="slick/slick/slick.min.js"></script>
+	
+	<script type="text/javascript" src="aos/aos.js"></script>
+	<!-- <script type="text/javascript" src="js/locomotive-scroll.min.js"></script> -->
+
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 </body>
-
 </html>
